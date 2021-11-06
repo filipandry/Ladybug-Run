@@ -9,6 +9,8 @@ public class LadybugController : MonoBehaviour
   public float jumpForce = 50;
   public float runSpeed = 10;
   private bool started = false;
+  public bool grounded = false;
+  public bool doubleJumped = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +30,31 @@ public class LadybugController : MonoBehaviour
       return;
     }
     transform.Translate(transform.right * runSpeed * Time.deltaTime);
+
+    var collider = GetComponent<Collider2D>();
+    grounded = collider.IsTouchingLayers(whatIsGround.value);
+    if (grounded)
+    {
+      doubleJumped = false;
+    }
   }
   public void Jump(InputAction.CallbackContext context)
   {
     if (started)
     {
-      var collider = GetComponent<Collider2D>();
-      if (collider.IsTouchingLayers(whatIsGround.value))
+      if(context.phase != InputActionPhase.Started)
       {
+        return;
+      }
+      if (grounded || !doubleJumped)
+      {
+        if (!grounded)
+        {
+          doubleJumped = true;
+        }
         var rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.AddForce(transform.up * jumpForce);
+        
       }
     }
     else

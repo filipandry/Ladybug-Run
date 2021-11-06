@@ -2653,6 +2653,7 @@ GameObject:
   - component: {fileID: 1062563293}
   - component: {fileID: 1062563292}
   - component: {fileID: 1062563296}
+  - component: {fileID: 1062563297}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2754,6 +2755,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartText: {fileID: 627659745}
+--- !u!114 &1062563297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062563291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 8aa3c3d1eb4e24d4783e8ee61f6a5c5e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ca5c7091-0a18-4817-874c-56ca3a71703c
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 045684ce-5e16-46f8-84d7-b40813f9e748
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2475d2d4-f747-411a-b1bb-de2a05dd6692
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dd173947-0a0b-4ba4-a3b5-e132a34a35a4
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a9358822-b49b-4424-a0f7-bf6e112821d7
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 185c1630-7dd2-4c49-92e8-52beb6c77bd6
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 770ee3f7-a298-4e6e-99d1-4b0863fb75c7
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ea2353c9-d0a9-4929-b1bc-823b595daabb
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 85b4f848-902d-41da-801a-e9140e4c3096
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c24f66ac-c7bd-4c74-9982-1d53ec989449
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 730bc820-937a-4fba-907e-5e82b02ba31f
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 806b93e0-b7de-42dd-8a63-085df36e58f9
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1062563296}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: HideStartText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6bdef778-1a7b-4ecf-b966-761507f243f2
+    m_ActionName: UI/StartGame[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: UI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1082526710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,19 +4019,7 @@ MonoBehaviour:
     m_ActionId: 045684ce-5e16-46f8-84d7-b40813f9e748
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1062563296}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: HideStartText
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 6bdef778-1a7b-4ecf-b966-761507f243f2
     m_ActionName: UI/New action
   m_NeverAutoSwitchControlSchemes: 0
@@ -5569,6 +5652,10 @@ PrefabInstance:
     - target: {fileID: -5657755696727801896, guid: a63f3a4cc1ecbfe43885a092a44db1fb, type: 3}
       propertyPath: whatIsGround.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389001314522990340, guid: a63f3a4cc1ecbfe43885a092a44db1fb, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5389001314522990340, guid: a63f3a4cc1ecbfe43885a092a44db1fb, type: 3}
       propertyPath: m_Constraints
